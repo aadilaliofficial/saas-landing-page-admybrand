@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ADmyBRAND AI Suite – SaaS Landing Page
 
-## Getting Started
+A modern, high-performance landing page for **ADmyBRAND AI Suite**, a fictional AI-powered marketing platform. Built with **Next.js 14+ App Router**, **Tailwind CSS**, and interactive animations.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: [Next.js 14+](https://nextjs.org/docs/app)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: Custom with utility classes
+- **Animations**: [GSAP](https://greensock.com/gsap/), [Framer Motion](https://www.framer.com/motion/)
+- **Validation**: [Zod](https://zod.dev/)
+- **Image Optimization**: `next/image`
+- **State Management**: Local component state
+
+---
+
+## 📁 Folder Structure (App Router)
+
+```
+my-app/
+├── app/
+│   ├── layout.jsx
+│   ├── page.jsx (HomePage)
+│   └── components/
+│       ├── HeroSection.jsx
+│       ├── FeaturesSection.jsx
+│       ├── PricingSection.jsx
+│       ├── TestimonialsSection.jsx
+│       ├── FAQSection.jsx
+│       ├── Footer.jsx
+│       ├── Button.jsx
+│       └── ...
+├── public/
+│   └── images/
+│       └── hero.png
+├── styles/
+│   └── globals.css
+├── next.config.js
+├── tailwind.config.js
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 💡 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 💥 Animated hero section with GSAP
+- 🧠 Feature highlights with modern layout
+- 💳 Pricing section with hover effects and neon highlights
+- 💬 Interactive FAQ accordion using GSAP
+- ✅ Fully responsive across mobile, tablet, and desktop
+- 🌑 Dark-themed neon UI
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/admybrand-landing.git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Go to project directory
+cd admybrand-landing
 
-## Deploy on Vercel
+# Install dependencies
+npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Run the development server
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🌐 Image Optimization
+
+External domains must be allowed in `next.config.js`:
+
+```js
+// next.config.js
+module.exports = {
+  images: {
+    domains: ['www.zdnet.com'],
+  },
+}
+```
+
+---
+
+## 📸 Hero Image
+
+Make sure to add the hero image in `/public/images/` or use external optimized images (as done with ZDNet).
+
+```jsx
+<Image
+  src="https://www.zdnet.com/a/img/resize/ada36a8ca094a512f972578b7b4742f38ac90b5c/2024/05/28/95683789-ebda-4272-964e-ce5d1a5a000f/gettyimages-1888972727.jpg?auto=webp&width=1280"
+  alt="AI Preview"
+  width={500}
+  height={500}
+  className="rounded-xl opacity-90"
+/>
+```
+
+---
+
+## 📦 Dependencies
+
+```json
+"dependencies": {
+  "next": "^14.0.0",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "gsap": "^3.12.5",
+  "zod": "^3.22.2",
+  "tailwindcss": "^3.4.1"
+}
+```
+
+---
+
+## ✨ Credits
+
+- Design & Development: [Your Name or Team]
+- Illustration: [Source if applicable]
+- Image: © ZDNet / Getty Images (for demo only)
+
+---
+
+## 📄 License
+
+This project is for learning/demo purposes. Commercial use of images or brand references may require appropriate licenses or permissions.
+
+---
